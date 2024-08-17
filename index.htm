@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renew Revolution</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f6f7;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #3c3b3d; /* Gris oscuro elegante */
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            font-weight: normal;
+            letter-spacing: 2px;
+            font-style: italic;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            border-bottom: 2px solid #e0a8a8;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            margin: 0 20px;
+            color: #3c3b3d;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: normal;
+        }
+
+        nav a:hover {
+            color: #a97c7c; /* Un tono rosado suave */
+            border-bottom: 2px solid #a97c7c;
+        }
+
+        /* Main Section */
+        .main-content {
+            padding: 40px 20px;
+            text-align: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .main-content h2 {
+            font-size: 2.5em;
+            color: #3c3b3d;
+            margin-bottom: 30px;
+            font-weight: normal;
+        }
+
+        .product {
+            display: inline-block;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            width: 280px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        .product h3 {
+            font-size: 1.7em;
+            color: #3c3b3d;
+            margin: 20px 0 15px;
+            font-weight: normal;
+        }
+
+        .product p {
+            color: #666;
+            font-size: 1em;
+        }
+
+        .product a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 16px;
+            color: #fff;
+            background-color: #a97c7c;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+        }
+
+        .product a:hover {
+            background-color: #7e5959;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #3c3b3d;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        /* Secciones ocultas inicialmente */
+        .section {
+            display: none;
+            padding: 40px 20px;
+            text-align: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            color: #3c3b3d;
+            margin-bottom: 30px;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Renew Revolution</h1>
+    </header>
+
+    <nav>
+        <a href="#collections" onclick="showSection('collections')">Colecciones</a>
+        <a href="#trends" onclick="showSection('trends')">Tendencias</a>
+        <a href="#exclusive-offers" onclick="showSection('exclusive-offers')">Ofertas Exclusivas</a>
+        <a href="#my-account" onclick="showSection('my-account')">Mi Cuenta</a>
+    </nav>
+
+    <div class="main-content">
+        <h2>Nuevas Colecciones</h2>
+
+        <div class="product">
+            <img src="img1.jpg" alt="Producto 1">
+            <h3>Vestido de Alta Moda</h3>
+            <p>Elegante y sofisticado.</p>
+            <a href="#product1" onclick="showProduct('product1')">Ver más</a>
+        </div>
+
+        <div class="product">
+            <img src="img2.jpg" alt="Producto 2">
+            <h3>Blusa de Seda</h3>
+            <p>Perfecta para cualquier ocasión.</p>
+            <a href="#product2" onclick="showProduct('product2')">Ver más</a>
+        </div>
+
+        <div class="product">
+            <img src="img3.jpg" alt="Producto 3">
+            <h3>Abrigo de Cachemira</h3>
+            <p>Para un look invernal de lujo.</p>
+            <a href="#product3" onclick="showProduct('product3')">Ver más</a>
+        </div>
+    </div>
+
+    <!-- Secciones ocultas para navegación -->
+    <div id="collections" class="section">
+        <h2>Colecciones</h2>
+        <p>Aquí encontrarás todas nuestras colecciones actuales.</p>
+    </div>
+
+    <div id="trends" class="section">
+        <h2>Tendencias</h2>
+        <p>Descubre las últimas tendencias en moda.</p>
+    </div>
+
+    <div id="exclusive-offers" class="section">
+        <h2>Ofertas Exclusivas</h2>
+        <p>Accede a nuestras ofertas exclusivas solo para miembros.</p>
+    </div>
+
+    <div id="my-account" class="section">
+        <h2>Mi Cuenta</h2>
+        <p>Gestiona tus datos y compras aquí.</p>
+    </div>
+
+    <!-- Secciones ocultas para los productos -->
+    <div id="product1" class="section">
+        <h2>Vestido de Alta Moda</h2>
+        <p>Detalles sobre el vestido.</p>
+    </div>
+
+    <div id="product2" class="section">
+        <h2>Blusa de Seda</h2>
+        <p>Detalles sobre la blusa.</p>
+    </div>
+
+    <div id="product3" class="section">
+        <h2>Abrigo de Cachemira</h2>
+        <p>Detalles sobre el abrigo.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Renew Revolution. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(function(section) {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        function showProduct(productId) {
+            showSection(productId);
+        }
+    </script>
+
+</body>
+</html>
